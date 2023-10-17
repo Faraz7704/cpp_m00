@@ -6,7 +6,7 @@
 /*   By: fkhan <fkhan@student.42abudhabi.ae>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:15:48 by fkhan             #+#    #+#             */
-/*   Updated: 2023/02/01 23:41:33 by fkhan            ###   ########.fr       */
+/*   Updated: 2023/10/17 23:30:43 by fkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ void    PhoneBook::addContact(void) {
 
 void    PhoneBook::printContacts(void) const {
     std::cout << "------------- Contacts -------------" << std::endl;
+    std::cout << "|" << std::setw(10) << "Index" << std::flush;
+    std::cout << "|" << std::setw(10) <<  "First name" << std::flush;
+    std::cout << "|" << std::setw(10) << "Last name" << std::flush;
+    std::cout << "|" << std::setw(10) << "Nickname" << std::flush;
+    std::cout << "|" << std::endl;
     for (size_t i = 0; i < 8; i++) {
         this->_contacts[i].view(i);
     }
@@ -56,11 +61,13 @@ int     PhoneBook::_readInput() const {
     {
         std::cout << "Please enter the contact index: " << std::flush;
         std::cin >> input;
-        if (std::cin.good() && (input >= 0 && input <= 8)) {
+        if (std::cin.good() && (input >= 0 && input <= 7)) {
             valid = true;
         } else {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            if (std::cin.eof())
+                exit(0);
             std::cout << "Invalid index; please re-enter." << std::endl;
         }
     } while (!valid);

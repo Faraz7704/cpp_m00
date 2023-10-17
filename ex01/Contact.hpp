@@ -6,7 +6,7 @@
 /*   By: fkhan <fkhan@student.42abudhabi.ae>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:15:50 by fkhan             #+#    #+#             */
-/*   Updated: 2023/02/01 23:31:53 by fkhan            ###   ########.fr       */
+/*   Updated: 2023/10/17 22:25:40 by fkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ private:
     std::string _firstName;
     std::string _lastName;
     std::string _nickname;
+    std::string _phoneNumber;
+    std::string _darkSecret;
 
     std::string _printLen(std::string str) const;
     std::string _getInput(std::string str) const;

@@ -6,7 +6,7 @@
 /*   By: fkhan <fkhan@student.42abudhabi.ae>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:15:49 by fkhan             #+#    #+#             */
-/*   Updated: 2023/02/02 14:27:28 by fkhan            ###   ########.fr       */
+/*   Updated: 2023/10/17 23:30:29 by fkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ int main(void) {
         }
         std::cout << "> " << std::flush;
         std::cin >> input;
+        if (!std::cin.good() && std::cin.eof()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            break;
+        }
     }
     return 0;
 }
