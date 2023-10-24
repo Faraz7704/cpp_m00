@@ -6,7 +6,7 @@
 /*   By: fkhan <fkhan@student.42abudhabi.ae>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:15:52 by fkhan             #+#    #+#             */
-/*   Updated: 2023/10/17 23:31:56 by fkhan            ###   ########.fr       */
+/*   Updated: 2023/10/24 19:47:16 by fkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ Contact::~Contact()
 }
 
 std::string Contact::_getInput(std::string str) const {
-    std::string input = "";
+    std::string input;
     bool        valid = false;
     do
     {
         std::cout << str << std::flush;
-        std::getline(std::cin, input);
+        std::cin >> input;
         if (std::cin.good() && !input.empty())
             valid = true;
         else {

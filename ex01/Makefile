@@ -6,14 +6,14 @@
 #    By: fkhan <fkhan@student.42abudhabi.ae>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 23:07:07 by fkhan             #+#    #+#              #
-#    Updated: 2023/02/02 14:29:37 by fkhan            ###   ########.fr        #
+#    Updated: 2023/10/24 19:43:13 by fkhan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= phoneBook
 	
 CC			= c++
-FLAGS		= -Wall -Wextra -Werror -std=c++98
+FLAGS		= -Wall -Wextra -Werror -std=c++98 -g3
 RM			= rm -rf
 
 OBJDIR 		= .objects/
