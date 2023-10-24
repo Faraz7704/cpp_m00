@@ -6,7 +6,7 @@
 /*   By: fkhan <fkhan@student.42abudhabi.ae>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 23:08:16 by fkhan             #+#    #+#             */
-/*   Updated: 2023/02/01 23:08:34 by fkhan            ###   ########.fr       */
+/*   Updated: 2023/10/24 19:54:34 by fkhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ int	main(int ac, char **av) {
 		}
 	}
 	std::cout << std::endl;
-	return (EXIT_SUCCESS);
+	return (0);
 }
